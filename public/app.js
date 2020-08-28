@@ -2,7 +2,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
     event.preventDefault()
 
     axios.post('/api/burgers', {
-        name: document.getElementById('burger').Value,
+        name: document.getElementById('burger').value,
         devoured: false
     })
         .then(({ data }) => {
@@ -11,7 +11,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
             burgerElem.id = data.id
             burgerElem.innerHTML = `
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"> ${document.getElementById('burger').Value}</h5>
+                <h5 class="mb-1"> ${document.getElementById('burger').value}</h5>
                 <button 
                     data-name="${document.getElementById('burger').value}"
                     class="devoured btn btn-success">✅
@@ -44,7 +44,7 @@ document.addEventListener('click', event => {
             event.target.parentNode.parentNode.remove()
         })
         .catch(err => console.log(err))
-    } else if (event.target.classLis.contains('remove')) {
+    } else if (event.target.classList.contains('remove')) {
         axios.delete(`/api/burgers/${event.target.parentNode.parentNode.id}`)
             .then(() => {
                 event.target.parentNode.parentNode.remove()
