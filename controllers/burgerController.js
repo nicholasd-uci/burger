@@ -1,4 +1,6 @@
+// this is basically your ROUTES FOLDER but for HBS //
 const router = require('express').Router()
+const burger = require('../models/burger.js')
 
 
 // GET all burgers
