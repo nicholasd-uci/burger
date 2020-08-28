@@ -37,12 +37,19 @@ document.addEventListener('click', event => {
             burgerElem.innerHTML = `
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"> ${event.target.dataset.burger_name}</h5>
+                <button class="btn btn-danger remove">X</button>
             </div>
             `
             document.getElementById('devoured').append(burgerElem)
             event.target.parentNode.parentNode.remove()
         })
         .catch(err => console.log(err))
+    } else if (event.target.classLis.contains('remove')) {
+        axios.delete(`/api/burgers/${event.target.parentNode.parentNode.id}`)
+            .then(() => {
+                event.target.parentNode.parentNode.remove()
+            })
+            .catch(err => console.log(err))
     }
 })
 
