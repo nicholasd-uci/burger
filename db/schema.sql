@@ -6,5 +6,5 @@ use burger_db;
 CREATE TABLE burgers (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
     burgerName VARCHAR(30) UNIQUE NOT NULL,
-    devoured BOOL NOT NULL
+    devoured BOOL NOT NULL DEFAULT 0
 );
