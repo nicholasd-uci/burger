@@ -5,6 +5,6 @@ CREATE DATABASE burger_db;
 use burger_db;
 CREATE TABLE burgers (
     id INT UNSIGN AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    burger_name VARCHAR(30) NOT NULL,
+    burger_name VARCHAR(30) INUQUE NOT NULL,
     devoured BOOL NOT NULL DEFAULT 0
 );

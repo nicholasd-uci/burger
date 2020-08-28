@@ -10,6 +10,5 @@ app.use(express.json())
 app.engine('.hbs', require('express-handlebars')({ extname: '.hbs' }))
 app.set('view engine', '.hbs')
 
-app.use(require('./routes'))
 
 app.listen(process.env.PORT || 3000)
