@@ -1,1 +1,53 @@
-<h1>Burger App</h1>
+<div class="jumbotron">
+    <h1 class="display-4"><center> Daa Burger App </center></h1>
+    <p class="lead"><center><u>This is a simple app that helps you keep track of the burger you have Devoured throughout your life!</u></center>
+        <center><b>Know the Burgers You Have Devour</b></center>
+        <center class="bigText">Welcome to Daa Burger App!</center>
+    </p>
+</div>
+
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                <label for="burger">Burger's Name</label>
+                <input type="text" class="form-control" id="burger">
+        </div>
+        <button type="submit" id="addBurger" class="btn btn-primary">Add Burger</button>
+      </form>
+    </div> --}}
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul id="list-group">
+                <h2>Not Devoured!</h2>
+                {{#each burgers}}
+                {{#unless this.devoured}}
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ this.burger_name }}</h5>
+                    </div>
+                    <p class="mb-1">Devoured: {{ this.devoured }}</p>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul id="list-group">
+                <h2>Devoured!</h2>
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ this.burger_name }}</h5>
+                    </div>
+                    <p class="mb-1">Devoured: {{ this.devoured }}</p>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
