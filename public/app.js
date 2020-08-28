@@ -2,7 +2,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
     event.preventDefault()
 
     axios.post('/api/burgers', {
-        burger_name: document.getElementById('burger').Value,
+        burgerName: document.getElementById('burger').Value,
         devoured: false
     })
         .then(({ data }) => {
@@ -36,7 +36,7 @@ document.addEventListener('click', event => {
             burgerElem.id = event.target.parentNode.parentNode.id
             burgerElem.innerHTML = `
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"> ${event.target.dataset.burger_name}</h5>
+                <h5 class="mb-1"> ${event.target.dataset.burgerName}</h5>
                 <button class="btn btn-danger remove">X</button>
             </div>
             `
