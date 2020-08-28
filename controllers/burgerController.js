@@ -5,14 +5,14 @@ const burger = require('../models/burger.js')
 
 // GET all burgers
 router.get('/burgers', (req, res) => {
-    burgers.getAll(burgers => {
+    burger.getAll(burgers => {
         res.json(burgers)
     })
 })
 
 // CREATE one burger
 router.post('/burgers', (req, res) => {
-    burger.CreateOne(req.body, id => {
+    burger.createOne(req.body, id => {
         res.json({ id })
     })
 })

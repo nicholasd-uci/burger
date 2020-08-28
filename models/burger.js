@@ -9,7 +9,7 @@ food.getAll = (cb) => {
 }
 
 // CREATE METHOD
-food.CreateOne = (burger, cb) => {
+food.createOne = (burger, cb) => {
     orm.create('burgers', burger, id => cb(id))
 }
 
