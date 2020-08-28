@@ -5,22 +5,30 @@ const burger = require('../models/burger.js')
 
 // GET all burgers
 router.get('/burgers', (req, res) => {
-
+    burgers.getAll(burgers => {
+        res.json(burgers)
+    })
 })
 
 // CREATE one burger
 router.post('/burgers', (req, res) => {
-
+    burger.CreateOne(req.body, id => {
+        res.json({ id })
+    })
 })
 
 // UPDATE one burger
-router.put('/burgers:id', (req, res) => {
-
+router.put('/burgers/:id', (req, res) => {
+    burger.updateOne(req.body, { id: req.params.id }, () => {
+        res.sendStatus(200)
+    })
 })
 
 // DELETE one burger
-router.delete('/burgers:id', (req, res) => {
-
+router.delete('/burgers/:id', (req, res) => {
+    burger.deleteOne({ id: req.params.id}, () => {
+        res.sendStatus(200)
+    })
 })
 
 module.exports = router

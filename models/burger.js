@@ -18,6 +18,7 @@ food.updateOne = (updates, where, cb) => {
     orm.update('burgers', updates, where, () => cb())
 }
 
+// DELETE METHOD
 food.deleteOne = (where, cb) => {
     orm.delete('burgers', where, () => cb())
 }
