@@ -2,7 +2,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
     event.preventDefault()
 
     axios.post('/api/burgers', {
-        burgerName: document.getElementById('burger').Value,
+        name: document.getElementById('burger').Value,
         devoured: false
     })
         .then(({ data }) => {
@@ -13,7 +13,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"> ${document.getElementById('burger').Value}</h5>
                 <button 
-                    data-burgerName="${document.getElementById('burger').value}"
+                    data-name="${document.getElementById('burger').value}"
                     class="devoured btn btn-success">✅
                 </button>
             </div>

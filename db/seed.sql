@@ -1,6 +1,6 @@
 USE burger_db;
 
-INSERT INTO burgers (burgerName, devoured)
+INSERT INTO burgers (name, devoured)
 VALUES 
 ('Jalapeno Western Bacon', false),
 ('Big Avo-Burg', false),
