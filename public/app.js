@@ -13,7 +13,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"> ${document.getElementById('burger').Value}</h5>
                 <button 
-                    data-burger_name"${document.getElementById('burger').value}"
+                    data-burgerName"${document.getElementById('burger').value}"
                     class="devoured btn btn-success">✅
                 </button>
             </div>

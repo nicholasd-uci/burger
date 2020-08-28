@@ -33,9 +33,9 @@
                     {{#unless this.devoured}}
                     <li id="{{ this.id }}" class="list-group-item">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{ this.burger_name }}</h5>
+                            <h5 class="mb-1">{{ this.burgerName }}</h5>
                             <button 
-                                data-burger_name="{{ this.burger_name }}"
+                                data-burger_name="{{ this.burgerName }}"
                                 class="devoured btn btn-success">✅
                             </button>
                         </div>
@@ -54,7 +54,7 @@
                     {{#if this.devoured}}
                     <li id="{{ this.id }}" class="list-group-item">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{ this.burger_name }}</h5>
+                            <h5 class="mb-1">{{ this.burgerName }}</h5>
                             <button class="btn btn-danger remove">X</button>
                         </div>
                         <p class="mb-1">Devoured: {{ this.devoured }}</p>
